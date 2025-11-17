@@ -1,30 +1,84 @@
-# RiscV-with-Neural-Network-AcceleratorRISC-V Processor with Neural Network Accelerator
-This project is a Verilog implementation of a RISC-V processor, a neural network accelerator, and an AXI memory interface. It was developed as part of my training at the Academy of Skill Development, focusing on VLSI design and hardware acceleration.
+ 
+---
 
-What’s Inside:
+````md
+# RISC-V Processor with Neural Network Accelerator
 
-1)RISC-V Core: A 5-stage pipeline processor supporting basic RV32I instructions.
+A lightweight Verilog project integrating a **5-stage RISC-V RV32I processor**, a **systolic-array neural network accelerator**, and a **simple AXI4-Lite memory interface**.  
+Built as part of my VLSI Design training at the **Academy of Skill Development**.
 
-2)Neural Network Accelerator: A systolic array for matrix multiplication, useful for simple neural network operations.
+---
 
-3)AXI Memory Interface: A simple AXI4 Lite slave interface for memory access.
+## 🚀 Overview
 
-How to Use:
+### ✔️ RISC-V Core  
+- 5-stage pipelined CPU  
+- Implements essential **RV32I** instructions  
+- Designed for learning, clarity, and extensibility  
 
-Clone this repository.
-Open the Verilog files in your preferred simulator (like ModelSim or Vivado).
-Run the testbench (tb_system.v) to simulate the entire system.
-Check the waveforms to see how the modules interact.
+### ✔️ Neural Network Accelerator  
+- Systolic-array architecture for fast matrix multiplication  
+- Offloads MAC-heavy operations from the CPU  
+- Demonstrates basic hardware acceleration  
 
-Project Structure:
+### ✔️ AXI4-Lite Memory Interface  
+- Minimal AXI4-Lite slave for memory-mapped access  
+- CPU ↔ Accelerator communication through mapped registers  
+- Easy to integrate and simulate  
 
-project-root/
-├── riscv_core.v          # RISC-V processor
-├── nn_accelerator.v      # Neural network accelerator
-├── axi_interface.v       # AXI memory interface
+---
+
+## 🛠️ How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/kmadhav02/RiscV-with-Neural-Network-Accelerator.git
+````
+
+2. Open the project in **ModelSim**, **Vivado**, or any Verilog simulator
+3. Run the system testbench:
+
+   ```text
+   tb_system.v
+   ```
+4. Inspect waveforms to observe:
+
+   * Instruction flow in the RISC-V CPU
+   * Accelerator matrix operations
+   * AXI-Lite memory transactions
+
+---
+
+## 📂 Project Structure
+
+```
+RiscV-with-Neural-Network-Accelerator/
+├── riscv_core.v          # 5-stage RISC-V RV32I processor
+├── nn_accelerator.v      # Systolic-array neural network accelerator
+├── axi_interface.v       # AXI4-Lite memory interface
 ├── tb_system.v           # System-level testbench
-├── README.md             # This file
-└── testbench/            # Individual testbenches (optional)
+├── testbench/            # Extra / optional testbenches
+└── README.md             # Project documentation
+```
 
-Credits
-This project was developed by Madhav Kaushik during an internship at the Academy of Skill Development. Special thanks to the mentors and team for their guidance and support.
+---
+
+## 📘 What This Project Demonstrates
+
+* How a **CPU + Accelerator** system communicates
+* Using a **systolic array** for neural workloads
+* Basics of **AXI4-Lite memory mapping**
+* How hardware acceleration boosts compute-heavy tasks
+* Useful learning reference for **VLSI, RTL, and digital design**
+
+---
+
+## 🙏 Credits
+
+Developed by **Madhav Kaushik**
+Special thanks to the mentors at the **Academy of Skill Development** for their guidance and support.
+
+---
+
+ 
+ 
